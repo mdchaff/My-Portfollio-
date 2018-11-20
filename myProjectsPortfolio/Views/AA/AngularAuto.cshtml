@@ -1,0 +1,211 @@
+@model AngAuto
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://getbootstrap.com/docs/4.1/examples/jumbotron/?# -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+    <link rel="stylesheet" href="~/css/HomeStyle.css"/>
+    <title>Jumbotron Template for Bootstrap</title>
+    <link href="./Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./Bootstrap_files/jumbotron.css" rel="stylesheet">
+    <style>
+        .assignments{
+            margin-left: 200px;
+        }
+        .containerB{
+            margin-left: 50%;
+            margin-top: -260px;
+        }
+        th{
+            padding-left: 15px;
+        }
+        .add{
+            margin-top: 55px;
+            margin-bottom: -55px;
+            margin-left: 68%;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function selectAll(){
+            var items=document.getElementsByClassName('inputx');    
+
+            console.log(document.getElementsByClassName('cba')[0].checked);
+            if(document.getElementsByClassName('cba')[0].checked == true){
+                for(var i=0; i<items.length; i++){
+                    if(items[i].type=='checkbox'){
+                        items[i].checked=true;
+                    }
+                }
+            }
+            else if(document.getElementsByClassName('cba')[0].checked == false){
+                for(var i=0; i<items.length; i++){
+                    if(items[i].type=='checkbox'){
+                        items[i].checked=false;
+                    }
+                }
+            }           
+        }
+
+
+
+        function myFunction(){
+            var theIn = document.getElementById('inputAddx');
+            var tablex = document.getElementById("tablex");
+            console.log(tablex.innerHTML.length);// 3,120
+            //16
+            
+            if(tablex.innerHTML.includes("<tbody>", 26) == true){
+                console.log("true");
+                document.getElementById("tablex").innerHTML += '<tr><th><input type="checkbox" name="TheInstalls" value="'+theIn.value+'" checked></th><th>'+theIn.value+'" checked></th><th>'+theIn.value+'</th></tr>';
+            }
+            else{
+                console.log("false");
+                document.getElementById("tablex").innerHTML += '<th><input class="inputx" type="checkbox" name="TheInstalls" value="'+theIn.value+'" checked></th><th>'+theIn.value+'</th>';
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="">Michael Chaffer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://localhost:5000">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://getbootstrap.com/docs/4.1/examples/jumbotron/?#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="https://getbootstrap.com/docs/4.1/examples/jumbotron/?#">Disabled</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com/" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="https://getbootstrap.com/docs/4.1/examples/jumbotron/?#">Action</a>
+                        <a class="dropdown-item" href="https://getbootstrap.com/docs/4.1/examples/jumbotron/?#">Another
+                            action</a>
+                        <a class="dropdown-item" href="https://getbootstrap.com/docs/4.1/examples/jumbotron/?#">Something
+                            else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <main role="main">
+        <div class="jumbotron">
+            <table class="add"
+                <tr>
+                    <th>Add install</th>
+                    <th colspan="2">
+                        <input id="inputAddx" type="text" name="addInstalls" style="width: 129px;" value="Hello">
+                        <button href="" id="btnAddtoList" onclick='myFunction()'>Add</button>
+                    </th>
+                </tr>
+            </table>
+            <form asp-controller="AA" asp-action="AngularAutoBuild" method="POST">
+                <div class="container">
+                    <h1 class="display-3">AngularAuto</h1>
+                    <br><br>
+                    <p>Click "Try it" to display the string you copy & paste to your CMD.</p>
+                    <table>
+                        <tr>
+                            <th>Project name: </th>
+                            <th><input type="text" name="projectName" value="MyPortfolio"></th>
+                        </tr>
+                        <tr>
+                            <th>Project Path: </th>
+                            <th><input type="text" name="thePath" value="Users,mdchf,Desktop,Angular Projects"></th>
+                        </tr>
+                        <tr>
+                            <th colspan="2"><input type="submit" value="Try it!"></th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="containerB">
+                    <h3>Installs</h3>
+                    <p>Add or remove installs for the project</p>
+                    <table id="tablex">
+                        <tr>
+                            <th><input class="cba" type="checkbox" onclick='selectAll()' checked="checked"/></th><th colspan="2">Select All:</th>
+                        </tr>
+                        <tr>
+                            <th><input class="inputx" type="checkbox" name="TheInstalls" value="ng new public" checked></th><th>ng new public</th>
+                            <th><input class="inputx" type="checkbox" name="theInstalls" value="npm install express" checked></th><th>npm install express</th>
+                        </tr>
+                        <tr>
+                            <th><input class="inputx" type="checkbox" name="TheInstalls" value="npm install bcryptjs" checked></th><th>npm install bcryptjs</th>
+                            <th><input class="inputx" type="checkbox" name="TheInstalls" value="npm install git://github.com/RGBboy/express-flash.git" checked></th><th>npm install git://github.com/RGBboy/express-flash.git</th>
+                        </tr>
+                        <tr>
+                            <th><input class="inputx" type="checkbox" name="TheInstalls" value="npm install ejs" checked></th><th>npm install ejs</th>
+                            <th><input class="inputx" type="checkbox" name="TheInstalls" value="npm init -y" checked></th><th>npm init -y</th>
+                        </tr>
+                        <tr>
+                            <th><input class="inputx" type="checkbox" name="TheInstalls" value="npm install express --save" checked></th><th>npm install express --save</th>
+                            <th><input class="inputx" type="checkbox" name="TheInstalls" value="npm install body-parser" checked></th><th>npm install body-parser</th>
+                        </tr>
+                        <tr>
+                            <th><input class="inputx" type="checkbox" name="TheInstalls" value="npm install --save express" checked></th><th>npm install --save express</th>
+                            <th><input class="inputx" type="checkbox" name="TheInstalls" value="npm install --save socket.io" checked></th><th>npm install --save socket.io</th>
+                        </tr>
+                        <tr>
+                            <th><input class="inputx" type="checkbox" name="TheInstalls" value="npm install mongoose --save" checked></th><th>npm install mongoose --save</th>
+                            <th><input class="inputx" type="checkbox" name="TheInstalls" value="npm install --save mongoose-unique-validator" checked></th><th>npm install --save mongoose-unique-validator</th>
+                        </tr>
+                        <tr>
+                            <th><input class="inputx" type="checkbox" name="TheInstalls" value="npm install -g @@angular/cli" checked></th><th>npm install -g <span>@@</span>angular/cli</th>
+                            <th><input class="inputx" type="checkbox" name="TheInstalls" value="npm install express-session" checked></th><th>npm install express-session</th>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <div class="container">
+        <div class="row">
+            <p>@ViewBag.fileBuild</p>
+        </div>
+    </div>
+
+
+    
+    <script src="./Bootstrap_files/jquery-3.3.1.slim.min.js.download" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="./Bootstrap_files/popper.min.js.download"></script>
+    <script src="./Bootstrap_files/bootstrap.min.js.download"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

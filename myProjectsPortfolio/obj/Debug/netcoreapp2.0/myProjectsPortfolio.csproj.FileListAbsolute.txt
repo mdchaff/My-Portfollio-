@@ -1,0 +1,22 @@
+C:\Users\mdchf\Desktop\MyPortfolio\myProjectsPortfolio\obj\Debug\netcoreapp2.0\myProjectsPortfolio.csprojAssemblyReference.cache
+C:\Users\mdchf\Desktop\MyPortfolio\myProjectsPortfolio\obj\Debug\netcoreapp2.0\myProjectsPortfolio.csproj.CoreCompileInputs.cache
+C:\Users\mdchf\Desktop\MyPortfolio\myProjectsPortfolio\obj\Debug\netcoreapp2.0\myProjectsPortfolio.AssemblyInfoInputs.cache
+C:\Users\mdchf\Desktop\MyPortfolio\myProjectsPortfolio\obj\Debug\netcoreapp2.0\myProjectsPortfolio.AssemblyInfo.cs
+C:\Users\mdchf\Desktop\MyPortfolio\myProjectsPortfolio\bin\Debug\netcoreapp2.0\myProjectsPortfolio.deps.json
+C:\Users\mdchf\Desktop\MyPortfolio\myProjectsPortfolio\bin\Debug\netcoreapp2.0\myProjectsPortfolio.runtimeconfig.json
+C:\Users\mdchf\Desktop\MyPortfolio\myProjectsPortfolio\bin\Debug\netcoreapp2.0\myProjectsPortfolio.runtimeconfig.dev.json
+C:\Users\mdchf\Desktop\MyPortfolio\myProjectsPortfolio\bin\Debug\netcoreapp2.0\myProjectsPortfolio.dll
+C:\Users\mdchf\Desktop\MyPortfolio\myProjectsPortfolio\bin\Debug\netcoreapp2.0\myProjectsPortfolio.pdb
+C:\Users\mdchf\Desktop\MyPortfolio\myProjectsPortfolio\obj\Debug\netcoreapp2.0\myProjectsPortfolio.dll
+C:\Users\mdchf\Desktop\MyPortfolio\myProjectsPortfolio\obj\Debug\netcoreapp2.0\myProjectsPortfolio.pdb
+C:\Users\mdchf\Desktop\My Sites\myProjectsPortfolio\bin\Debug\netcoreapp2.0\myProjectsPortfolio.deps.json
+C:\Users\mdchf\Desktop\My Sites\myProjectsPortfolio\bin\Debug\netcoreapp2.0\myProjectsPortfolio.runtimeconfig.json
+C:\Users\mdchf\Desktop\My Sites\myProjectsPortfolio\bin\Debug\netcoreapp2.0\myProjectsPortfolio.runtimeconfig.dev.json
+C:\Users\mdchf\Desktop\My Sites\myProjectsPortfolio\bin\Debug\netcoreapp2.0\myProjectsPortfolio.dll
+C:\Users\mdchf\Desktop\My Sites\myProjectsPortfolio\bin\Debug\netcoreapp2.0\myProjectsPortfolio.pdb
+C:\Users\mdchf\Desktop\My Sites\myProjectsPortfolio\obj\Debug\netcoreapp2.0\myProjectsPortfolio.csprojAssemblyReference.cache
+C:\Users\mdchf\Desktop\My Sites\myProjectsPortfolio\obj\Debug\netcoreapp2.0\myProjectsPortfolio.csproj.CoreCompileInputs.cache
+C:\Users\mdchf\Desktop\My Sites\myProjectsPortfolio\obj\Debug\netcoreapp2.0\myProjectsPortfolio.AssemblyInfoInputs.cache
+C:\Users\mdchf\Desktop\My Sites\myProjectsPortfolio\obj\Debug\netcoreapp2.0\myProjectsPortfolio.AssemblyInfo.cs
+C:\Users\mdchf\Desktop\My Sites\myProjectsPortfolio\obj\Debug\netcoreapp2.0\myProjectsPortfolio.dll
+C:\Users\mdchf\Desktop\My Sites\myProjectsPortfolio\obj\Debug\netcoreapp2.0\myProjectsPortfolio.pdb

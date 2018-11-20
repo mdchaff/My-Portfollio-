@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>wikipediacrawler</title>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.js"></script>
+
+	<script type="text/javascript">
+		var searchUrl = 'https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=';
+		var contentUrl = 'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=';
+
+		var userInput;
+		var counter = 0;
+
+		function setup() {
+			noCanvas();
+			userInput = select('#userinput');
+			userInput.changed(startSearch);
+			//goWiki(userInput.value());
+
+			function startSearch() {
+				counter = 0;
+				goWiki(userInput.value());
+			}
+
+			function goWiki(term) {
+				counter = counter + 1;
+				if (counter < 10) {
+					var url = searchUrl + term;
+					loadJSON(url, gotSearch, 'json');
+				}
+			}
+
+			function gotSearch(data) {
+				console.log(data);
+				var len = data[1].length;
+				var index = floor(random(len));
+				var title = data[1][index];
+				title = title.replace(/\s+/g, '_');
+				createDiv(title);
+				console.log('Querying: ' + title);
+				var url = contentUrl + title;
+				loadJSON(url, gotContent, 'jsonp');
+			}
+
+			function gotContent(data) {
+				var page = data.query.pages;
+				var pageId = Object.keys(data.query.pages)[0];
+				console.log(pageId);
+				var content = page[pageId].revisions[0]['*'];
+				console.log(content);
+				var wordRegex = /\b\w{4,}\b/g;
+				var words = content.match(wordRegex);
+				var word = random(words);
+				goWiki(word);
+				console.log(word);
+			}
+		}
+	</script>
+
+</head>
+<body>
+	<h2>Wikipedia Coding Challenge Thing</h2>
+
+	<p>
+		word: <input id="userinput" value="rainbow" />
+	</p>
+</body>
+</html>
